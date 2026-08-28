@@ -1,0 +1,5 @@
+bridge_patrol,complete
+forest_watch,complete
+supply_run,incomplete
+signal_repair,complete
+river_mapping,incomplete

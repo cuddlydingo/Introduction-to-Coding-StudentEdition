@@ -1,0 +1,27 @@
+Week 04 Test Cases Template
+
+Program: week04_weather_advice.py
+
+Test Case 1:
+Input:
+Expected Output:
+
+Test Case 2:
+Input:
+Expected Output:
+
+Test Case 3:
+Input:
+Expected Output:
+
+Test Case 4:
+Input:
+Expected Output:
+
+Test Case 5:
+Input:
+Expected Output:
+
+Test Case 6:
+Input:
+Expected Output:

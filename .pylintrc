@@ -1,0 +1,20 @@
+[MAIN]
+# Keep intentionally buggy teaching exercises out of strict lint gates.
+ignore=
+    .venv,
+    __pycache__
+ignore-patterns=
+    week08_p[1-5]_.*\.py,
+    buggy_adventure\.py
+# Allow linting template modules that use src-local imports.
+init-hook='import os,sys; sys.path.insert(0, os.path.abspath("templates/group-project-template/src"))'
+ignore-paths=
+    .*week08-buggy-files/week08_p[1-5]_.*\.py$,
+    .*week17-bug-triage-sample/buggy_adventure\.py$
+
+[MESSAGES CONTROL]
+# Small instructional scripts intentionally omit full production-style scaffolding.
+disable=
+    missing-module-docstring,
+    missing-function-docstring,
+    invalid-name

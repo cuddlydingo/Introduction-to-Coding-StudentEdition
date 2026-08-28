@@ -1,0 +1,7 @@
+{
+  "intro": {
+    "prompt": "Do you go left or right?",
+    "left": "stone_marker",
+    "right": "river_sound"
+  }
+}

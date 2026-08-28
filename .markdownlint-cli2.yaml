@@ -1,0 +1,10 @@
+ignores:
+  - .venv/**
+
+config:
+  default: true
+  MD013: false
+  MD025: false
+  MD036: false
+  MD024:
+    siblings_only: true

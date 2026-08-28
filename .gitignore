@@ -1,0 +1,14 @@
+# Python virtual environment - recreate locally with:
+#   uv venv && uv pip install -r requirements.txt
+.venv/
+__pycache__/
+*.py[cod]
+
+# Ruff lint cache (regenerated automatically)
+.ruff_cache/
+
+# macOS Finder metadata
+.DS_Store
+
+# Local browser-automation temp profile (not course content)
+.chrome-tmp/

@@ -1,0 +1,12 @@
+Week 03 Logic Quiz Prompts
+
+Instructions: For each expression, predict whether the result is True or False.
+
+1) (5 > 3) and (2 < 4)
+2) (10 == 10) and (7 != 7)
+3) (8 <= 8) or (3 > 5)
+4) not (4 < 2)
+5) (6 + 2 == 9) or (3 * 3 == 9)
+6) ("cat" == "Cat")
+7) (15 % 2 == 1) and (9 // 2 == 4)
+8) (12 > 20) or (7 < 11)
