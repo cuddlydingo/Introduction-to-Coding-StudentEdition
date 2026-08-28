@@ -140,6 +140,7 @@ Assignments run on any standard personal computer. Full minimum and recommended 
 | [Introduction_to_Coding.md](Introduction_to_Coding.md) | Full course specification: objectives, structure, and computer requirements |
 | [syllabus/](syllabus/) | Parent/student syllabus handout and the academic honor statement |
 | [course-materials/](course-materials/) | Provided student files: quizzes, templates, buggy files, cross-language samples, API bonus, and the BranchQuest map |
+| [chalkboard-talk/](chalkboard-talk/) | Weekly lesson readings to study before each homework (concepts, worked examples, and common mistakes) |
 | [homework-packets/](homework-packets/) | Weekly homework packets (student versions) |
 | [lesson-plans/](lesson-plans/) | Weekly plan, submission workflow, collaborative project, research track, and grading framework |
 | [templates/](templates/) | Starter repository templates for individual and group work |
