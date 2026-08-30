@@ -58,6 +58,9 @@ If you plan to use the command line, copy your fork to your computer with
 # clone YOUR fork — use your own username, not cuddlydingo
 git clone https://github.com/<your-username>/Introduction-to-Coding-StudentEdition.git
 cd Introduction-to-Coding-StudentEdition
+
+# (recommended) link the class master as "upstream" so you can pull new materials later
+git remote add upstream https://github.com/cuddlydingo/Introduction-to-Coding-StudentEdition.git
 ```
 
 ## Every week: two ways to do it
@@ -169,12 +172,50 @@ from scratch.
 
 ## Getting new class materials during the term
 
-Sometimes your teacher adds or fixes materials in the class master after you have
-forked. To pull those updates into your fork:
+Sometimes your teacher adds new weeks, or fixes files, in the class master
+**after** you have already forked. Those changes do **not** appear in your fork
+by themselves — you pull them in yourself. A good habit is to do this at the
+**start of each week, before you create that week's quest branch**, so you always
+build on the latest materials. Your own homework is kept; this just adds your
+teacher's changes on top.
 
-- **Web browser:** open your fork and click **Sync fork → Update branch**.
-- **Command line:** `git checkout main`, then `git pull` — or ask your teacher
-  for the one-line `upstream` setup if a whole new week of materials was added.
+### Option 1 — Web browser (easiest)
+
+You do **not** need the `upstream` link from Option 2 for this. Because you
+forked the repository, GitHub already knows your class master, and the **Sync
+fork** button pulls from it automatically.
+
+1. Open your fork on GitHub
+   (`github.com/<your-username>/Introduction-to-Coding-StudentEdition`).
+2. Just above the file list, click **Sync fork**, then **Update branch**. GitHub
+   copies your teacher's new commits into your fork's `main`.
+3. **Warning — never click "Discard N commits."** That button deletes *your*
+   homework. If GitHub says it cannot update automatically, stop and use the
+   command line below, or ask your teacher — do not discard anything.
+4. If you also work on your computer, bring the update down afterward:
+   `git checkout main` then `git pull`.
+
+### Option 2 — Command line
+
+This uses the `upstream` link to the class master. You only add it **once** (you
+may already have done this during setup):
+
+```bash
+# one time only — skip if you already added upstream
+git remote add upstream https://github.com/cuddlydingo/Introduction-to-Coding-StudentEdition.git
+```
+
+Then, any time you want the latest materials:
+
+```bash
+git checkout main            # be on your own main branch
+git pull upstream main       # pull the teacher's updates into your main
+git push origin main         # save them back to your fork on GitHub
+```
+
+If git reports a **conflict** — uncommon, and only if you changed the same file
+your teacher changed — ask your teacher to help you resolve it. Do not delete your
+work to make the message go away.
 
 ## Before you submit each week
 
