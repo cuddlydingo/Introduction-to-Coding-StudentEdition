@@ -94,16 +94,16 @@ Each week is framed as a **quest branch**, submitted by **merge request** — gi
 
 ## How work is submitted
 
-You will practice authentic feature-branch and merge-request (pull request) workflows. Each week's homework is its own quest branch:
+You will practice authentic feature-branch and merge-request (pull request) workflows. At the start of term you **fork** the class master repository to your own GitHub account and do all your work in that fork. Each week's homework is then its own quest branch:
 
 1. Update local `main`: `git checkout main` then `git pull`.
 2. Create the quest branch: `git checkout -b quest/weekNN-topic`.
 3. Complete the work in the assigned file names.
 4. Commit using the required message format: `Week NN - Firstname Lastname - Homework`.
-5. Push the branch and open a merge request titled `Week NN - Firstname Lastname - <Quest name>`.
-6. Address feedback, then merge into `main` before the next class.
+5. Push the branch and open a merge request into your own fork's `main`, titled `Week NN - Firstname Lastname - <Quest name>`.
+6. Merge your own merge request into `main` before the next class.
 
-Your instructor reviews each pull request for correctness, readability, and commit history, then leaves feedback and a grade. Full details are in [lesson-plans/github-workflow-and-submission.md](lesson-plans/github-workflow-and-submission.md).
+You merge your own merge requests — no approval needed. Your instructor reviews your merged work afterward for correctness, readability, and commit history, then leaves feedback and a grade. Full details are in [lesson-plans/github-workflow-and-submission.md](lesson-plans/github-workflow-and-submission.md).
 
 ---
 
@@ -152,7 +152,7 @@ Assignments run on any standard personal computer. Full minimum and recommended 
 
 1. Read the [syllabus handout](syllabus/parent-student-syllabus-handout.md) and the [BranchQuest map](course-materials/branchquest-map.md).
 2. Set up Python 3 and VS Code (or a browser-based environment), then pick your GitHub username in Week 1.
-3. Provision your personal repository from the [student repo template](templates/student-repo-template/README.md).
+3. Fork the class master repository to your own GitHub account; see the [submission workflow guide](lesson-plans/github-workflow-and-submission.md) for the one-time fork-and-clone steps.
 4. Each week, branch from `main`, complete your quest in [homework-packets/student/](homework-packets/student/), and open a merge request before the next class.
 
 ---

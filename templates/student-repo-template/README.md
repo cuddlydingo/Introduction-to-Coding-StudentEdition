@@ -20,9 +20,10 @@ This repository stores one student's weekly coding assignments, final project, a
 2. Complete the assignment in the current week folder.
 3. Verify the program runs.
 4. Commit using the required message format.
-5. Push the branch and open a **merge request** (pull request) titled
-   `Week NN - Firstname Lastname - <Quest name>`.
-6. Request review, then merge into `main` before the next in-person class.
+5. Push the branch and open a **merge request** (pull request) into your fork's
+   `main`, titled `Week NN - Firstname Lastname - <Quest name>`.
+6. Merge your own merge request into `main` before the next in-person class — you
+   own your fork, so no approval is needed.
 
 See [../../lesson-plans/github-workflow-and-submission.md](../../lesson-plans/github-workflow-and-submission.md)
 for the full command sequence.
