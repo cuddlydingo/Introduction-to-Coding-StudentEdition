@@ -26,7 +26,8 @@ This repository stores one student's weekly coding assignments, final project, a
    own your fork, so no approval is needed.
 
 See [../../lesson-plans/github-workflow-and-submission.md](../../lesson-plans/github-workflow-and-submission.md)
-for the full command sequence.
+for the full command sequence, including how to connect your computer to GitHub
+with a Personal Access Token or SSH key.
 
 ## Commit message format
 

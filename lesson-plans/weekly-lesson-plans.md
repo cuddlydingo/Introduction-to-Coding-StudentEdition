@@ -20,7 +20,9 @@ Each week is framed as a **quest branch** submitted by **merge request**; see
 - Course expectations and academic integrity policy.
 - What a program is: source code, interpreter, execution.
 - Python + editor setup check.
-- GitHub submission flow demo (instructor-led).
+- GitHub submission flow demo (instructor-led), including connecting a local
+  editor to GitHub with a Personal Access Token or SSH key — see
+  [github-workflow-and-submission.md](./github-workflow-and-submission.md).
 
 **In-class practice**
 

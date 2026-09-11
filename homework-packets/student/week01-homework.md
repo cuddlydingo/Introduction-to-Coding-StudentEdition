@@ -8,8 +8,10 @@
 **Quest branch:** Work on a branch named `quest/week01-onboarding`. When the
 quest is done, open a merge request titled
 `Week 01 - Firstname Lastname - Onboarding` and request review before merging.
-New to branches? See
-[github-workflow-and-submission.md](../../lesson-plans/github-workflow-and-submission.md).
+New to branches, or setting up your own computer? See
+[github-workflow-and-submission.md](../../lesson-plans/github-workflow-and-submission.md)
+for the one-time fork, GitHub sign-in (Personal Access Token or SSH key), and
+branch steps.
 
 ## Problem 1 - Hello, future maker
 

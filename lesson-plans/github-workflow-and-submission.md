@@ -49,17 +49,158 @@ when.
 3. Click **Fork** (top right) → **Create fork**. You now have your own copy at
    `github.com/<your-username>/Introduction-to-Coding-StudentEdition`.
 
-### Step B — Get the files onto your computer (optional, for command-line work)
+### Step B — Connect your computer to GitHub (one time)
 
-If you plan to use the command line, copy your fork to your computer with
-`git clone`. If you plan to work entirely in the web browser, you can skip this.
+*Working entirely in the web browser? You can skip Step B and Step C — the GitHub
+website already knows who you are. These two steps are only for people who use
+**VS Code** (or another program) on their own computer.*
+
+When you work on your own computer, git has to prove to GitHub that you really
+are you every time you download (**pull**) or upload (**push**) your work.
+**GitHub no longer accepts your account password for this.** Instead you set up
+**one** of the two methods below, one time, and then it just works.
+
+| Method | What it is | Good because |
+| --- | --- | --- |
+| **Personal Access Token** | A long, computer-made password you paste in once. Uses `https://` addresses. | Simplest to start with. |
+| **SSH key** | A matching pair of secret + public keys your computer makes. Uses `git@github.com` addresses. | After setup, you never type anything. |
+
+You only need **one**. If you are not sure, pick the **Personal Access Token** —
+it is the easier of the two for beginners. Both work on Windows, macOS, and
+Linux; the small differences are noted below.
+
+> **Easiest of all (VS Code):** VS Code can do this for you. Click the
+> **Accounts** icon in the bottom-left corner → **Sign in with GitHub**, and
+> approve the page that opens in your browser. After that, the **Source Control**
+> panel can pull, commit, and push with no token and no keys to manage — and you
+> can skip the rest of Step B. The manual methods below are here for when you
+> want to use the terminal, or are using a different editor.
+
+#### Method 1 — Personal Access Token (HTTPS)
+
+**1. Make the token on the GitHub website** (the same steps on every operating
+system):
+
+1. Sign in to GitHub, then click your profile picture (top-right) →
+   **Settings**.
+2. In the left menu, scroll all the way down to **Developer settings**.
+3. Click **Personal access tokens → Tokens (classic)**.
+4. Click **Generate new token → Generate new token (classic)**; confirm your
+   password if asked.
+5. In **Note**, type something you will recognize, like `Intro to Coding laptop`.
+6. Set **Expiration** to a date after the class ends (for example, `Custom` →
+   the last day of the semester).
+7. Under **Select scopes**, tick the single box named **repo**. That is all you
+   need.
+8. Scroll down and click **Generate token**.
+9. **Copy the token right now and keep it somewhere safe** (a password manager is
+   ideal). GitHub shows it only once. It looks like `ghp_xxxxxxxxxxxxxxxx`. Treat
+   it like a password — never paste it into your code or share it with anyone.
+
+**2. Use the token on your computer.** The first time you push or clone over
+`https://`, git asks you to sign in:
+
+- For the **username**, type your GitHub username.
+- For the **password**, paste the **token** (not your real GitHub password).
+
+So you are not asked every single time, let your computer remember it safely:
+
+- **On Windows:** Git for Windows already includes **Git Credential Manager**.
+  Type the token once when asked; Windows saves it for you. Nothing else to do.
+- **On macOS:** run this one command so the token is stored in your Keychain:
+
+  ```bash
+  git config --global credential.helper osxkeychain
+  ```
+
+- **On Linux:** remember it for a while (here, one hour) so you are not asked over
+  and over:
+
+  ```bash
+  git config --global credential.helper "cache --timeout=3600"
+  ```
+
+  (To store it permanently on Linux, install **Git Credential Manager**, or ask
+  your teacher.)
+
+#### Method 2 — SSH key
+
+An SSH key is two matching files: a **private** key (a secret — never share it)
+and a **public** key (safe to give away). You hand GitHub the public one; your
+computer keeps the private one.
+
+**1. Open a terminal.**
+
+- **On Windows:** open **Git Bash** (it comes with Git for Windows).
+- **On macOS:** open **Terminal**.
+- **On Linux:** open your usual terminal.
+
+**2. Create the key** (the same command everywhere — use your own GitHub email):
+
+```bash
+ssh-keygen -t ed25519 -C "you@example.com"
+```
+
+Press **Enter** to accept the suggested file name and location. When it asks for
+a passphrase, you may press **Enter** to leave it empty, or type one for extra
+safety.
+
+**3. Copy the public key** (the `.pub` file — never the other one):
+
+- **On Windows (Git Bash):** `cat ~/.ssh/id_ed25519.pub`
+- **On macOS:** `pbcopy < ~/.ssh/id_ed25519.pub` (copies it to your clipboard),
+  or `cat ~/.ssh/id_ed25519.pub` to see it.
+- **On Linux:** `cat ~/.ssh/id_ed25519.pub`, then select and copy the line (or
+  use `xclip -sel clip < ~/.ssh/id_ed25519.pub`).
+
+The line starts with `ssh-ed25519` and ends with your email.
+
+**4. Give the public key to GitHub:**
+
+1. In your browser: GitHub → profile picture → **Settings** → **SSH and GPG
+   keys**.
+2. Click **New SSH key**.
+3. **Title:** something you recognize, like `Intro to Coding laptop`.
+4. **Key:** paste the whole `ssh-ed25519 ...` line.
+5. Click **Add SSH key**.
+
+**5. Test that it works:**
+
+```bash
+ssh -T git@github.com
+```
+
+Type `yes` the first time to trust GitHub. If you see a greeting with your
+username — `Hi alex-kim! You've successfully authenticated...` — you are set. (It
+also says it "does not provide shell access," which is normal and fine.)
+
+When you use SSH, clone with the address that starts with `git@github.com:`
+instead of `https://` — shown in Step C next.
+
+> **If a push or pull is ever refused with an "authentication failed" message,**
+> it almost always means the token was mistyped or has expired (make a fresh one
+> — Method 1), or the SSH key was not added correctly (recheck Method 2). When in
+> doubt, the VS Code **Sign in with GitHub** button above is the quickest fix.
+
+### Step C — Get the files onto your computer (clone)
+
+Now copy your fork to your computer with `git clone`, using the address that
+matches the method you set up in Step B. (Working only in the browser? You can
+skip this.)
 
 ```bash
 # clone YOUR fork — use your own username, not cuddlydingo
+
+# If you set up a Personal Access Token (HTTPS):
 git clone https://github.com/<your-username>/Introduction-to-Coding-StudentEdition.git
+
+# — or — if you set up an SSH key:
+git clone git@github.com:<your-username>/Introduction-to-Coding-StudentEdition.git
+
 cd Introduction-to-Coding-StudentEdition
 
-# (recommended) link the class master as "upstream" so you can pull new materials later
+# (recommended) link the class master as "upstream" so you can pull new materials
+# later. This one only downloads public class files, so HTTPS is fine either way:
 git remote add upstream https://github.com/cuddlydingo/Introduction-to-Coding-StudentEdition.git
 ```
 

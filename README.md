@@ -125,7 +125,7 @@ You merge your own merge requests — no approval needed. Your instructor review
 
 - **Runtime:** Python 3 (current stable release).
 - **Editor:** Visual Studio Code with the official Python extension.
-- **Version control:** Git and GitHub for submissions and feedback.
+- **Version control:** Git and GitHub for submissions and feedback. If you work in a local editor, you connect to GitHub once with a Personal Access Token or SSH key — the [submission workflow guide](lesson-plans/github-workflow-and-submission.md) shows how on Windows, macOS, and Linux.
 - **Supplemental languages:** demonstrated through instructor-led examples and online sandboxes; no local install of Lua, C++, or Java is required.
 - **Tablet-friendly:** every assignment can be completed on a laptop, Chromebook, or tablet with a keyboard via a browser-based Python environment.
 
@@ -152,7 +152,7 @@ Assignments run on any standard personal computer. Full minimum and recommended 
 
 1. Read the [syllabus handout](syllabus/parent-student-syllabus-handout.md) and the [BranchQuest map](course-materials/branchquest-map.md).
 2. Set up Python 3 and VS Code (or a browser-based environment), then pick your GitHub username in Week 1.
-3. Fork the class master repository to your own GitHub account; see the [submission workflow guide](lesson-plans/github-workflow-and-submission.md) for the one-time fork-and-clone steps.
+3. Fork the class master repository to your own GitHub account. If you will work in VS Code or another local editor, connect your computer to GitHub once with a Personal Access Token or SSH key. The [submission workflow guide](lesson-plans/github-workflow-and-submission.md) covers the one-time fork, GitHub sign-in, and clone steps.
 4. Each week, branch from `main`, complete your quest in [homework-packets/student/](homework-packets/student/), and open a merge request before the next class.
 
 ---
